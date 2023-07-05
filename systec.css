@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 300%;
+  min-height: 100vh;
+  max-width: 100%;
+  background: papayawhip;
+  font-family:system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+}
+.ancho {
+  width: 100%;
+  display: flex;
+  color: #fff;
+}
+.logo {
+  width: 12em;
+  margin: .125em .625em .125em 7.5em;
+}
+.nav-menu-hamburguesa{
+  display: none;
+}
+.nav {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  margin: 0 auto;
+  background: #0d2033;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav-menu-item {
+  letter-spacing: .0625em;
+  font-weight: bold;
+}
+.link{
+margin-left: 6.25em;
+color: aliceblue;
+text-decoration: none;
+}
+.main {
+  height: 90%;
+}
+/* .section1{ 
+  margin-top: 20%; 
+ }  */
+.imagen1 {
+  width: 100%;
+  height: 680px;
+}
+.imagenesProductos {
+    display: flex;
+    margin-top: 0;
+    height: 70%;
+}  
+.productos{
+    width:65%;
+    margin-right: .5%;
+    margin-left: .5%;
+    border: none;
+    margin-top: 0;
+  }
+.imagen4, .imagen5, .imagen6, .imagen7, .imagen8, .imagen9, .imagen10{
+    width:30%;
+    height:40%;
+    border-radius: .875em .875em .875em .875em;
+  }
+  .lista {
+    width: 35%;
+    color: #5D5E5D;
+    font-size: 1.25em;
+    font-weight: 25em;
+    margin-top: 5%;
+  }
+  .boton {
+    font-size: 1em;
+    font-weight: 31.25em;
+    line-height: 1em;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: transparent;
+    background-image: linear-gradient(150deg, #008DBB 40%, #362B7B 100%);
+    border-radius: 3.125em 3.125em 3.125em 3.125em;
+    padding: 4%;
+    margin-left: 13%;
+  }
+  .pieDePagina {
+    width: 100%;
+    background: #0a141d;
+    height: 19%;
+  }
+  .grupo1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 6.125em;
+    padding: .94em .625em;
+  }
+  figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    width: 100%;
+  }
+  .box h2{
+    width: 100%;
+    color: #fff;
+    margin-bottom: 1.5625em;
+    box-sizing: 1.25em;
+  }
+  .box p{
+    width: 100%;
+    color: #efefef;
+    margin-bottom: .3125em;
+  }
+  .redSocial {
+    display: flex;
+  }
+  .fa {
+    text-decoration: none;
+    color: #fff;
+    width: 3em;
+    font-size: 2.25em;
+    margin-left: 0;
+  }
+  .grupo2 {
+    background: #0d2033;
+    padding: .625em .625em;
+    text-align: center;
+    color: #fff;
+  }
+  .grupo2 small {
+    font-size: .94em;
+  }
+  @media screen and (max-width: 1070px) {
+    .nav-menu-hamburguesa{
+      display: block;
+      color: #fff;
+      background: #0d2033;
+      border: none;
+      font-size: 1.875em;
+      padding: 0 5%;
+      margin-left: 5.375em;
+    }
+    .nav-menu {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 920px) {
+    .grupo1 {
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2em;
+      padding: 2.2875em 0;
+     }
+     .grupo2 {
+      margin-bottom: 0%;
+     }
+     .box {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+     }
+     .redSocial {
+      display: flex;
+      columns: #fff;
+     }
+     footer div .redSocial a {
+      color: #fff;
+      padding: .3125em;
+      font-size: .9375em;
+     }
+     .pieDePagina {
+      font-size: .8em;
+      height: 28%;
+     }
+  }
+
+  @media screen and (max-width: 550px) {
+    body {
+      height: 250%;
+    }
+    .logo {
+      width: 5.25em;
+      margin: 2.125em 1em .125em 1.875em;
+    }
+    .nav-menu-hamburguesa{
+      display: block;
+      color: #fff;
+      background: #0d2033;
+      border: none;
+      font-size: 1.875em;
+      padding: 0 5%;
+      margin-left: 5.375em;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .main {
+      height: 110%;
+    }
+    .imagen1 {
+      height: 25%;
+    }
+    .imagenesProductos {
+      display: flex;
+      flex-direction: column;
+    }
+    .productos{
+      width: 94%;
+      height: 60%;
+      margin-left: 5%;
+      border: none;
+    }
+    .imagen4, .imagen5, .imagen6, .imagen7, .imagen8, .imagen9, .imagen10{
+      width:47%;
+      height:32%;
+      border-radius: .475em .475em .475em .475em;
+    }
+   .lista{
+    width: 90%;
+    height: 30%;
+    margin-left: 10%;
+    margin-top: 2%;
+   }
+   .grupo1 {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2em;
+    padding: 2.2875em 0;
+   }
+   .grupo2 {
+    margin-bottom: 0%;
+   }
+   .box {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+   .redSocial {
+    display: flex;
+    columns: #fff;
+   }
+   footer div .redSocial a {
+    color: #fff;
+    padding: .3125em;
+    font-size: .9375em;
+   }
+   .pieDePagina {
+    font-size: .8em;
+    height: 35%;
+   }
+  }
+
+  
