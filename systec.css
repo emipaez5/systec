@@ -7,15 +7,13 @@ html {
   height: 100%;
 }
 body {
-  width: 100%;
-  height: 300%;
   min-height: 100vh;
   max-width: 100%;
   background: papayawhip;
-  font-family:system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+  font-family:system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0 auto;
 }
 .ancho {
-  width: 100%;
   display: flex;
   color: #fff;
 }
@@ -23,7 +21,7 @@ body {
   width: 12em;
   margin: .125em .625em .125em 7.5em;
 }
-.nav-menu-hamburguesa{
+.nav-menu-hamburguesa, .cerrar{
   display: none;
 }
 .nav {
@@ -47,35 +45,26 @@ body {
 }
 .link{
 margin-left: 6.25em;
-color: aliceblue;
+color: #fff;
 text-decoration: none;
 }
-.main {
-  height: 90%;
-}
-/* .section1{ 
-  margin-top: 20%; 
- }  */
 .imagen1 {
   width: 100%;
-  height: 680px;
+  height: 50%;
 }
 .imagenesProductos {
     display: flex;
-    margin-top: 0;
-    height: 70%;
 }  
 .productos{
     width:65%;
     margin-right: .5%;
     margin-left: .5%;
     border: none;
-    margin-top: 0;
   }
 .imagen4, .imagen5, .imagen6, .imagen7, .imagen8, .imagen9, .imagen10{
     width:30%;
     height:40%;
-    border-radius: .875em .875em .875em .875em;
+    border-radius: .875em
   }
   .lista {
     width: 35%;
@@ -83,6 +72,19 @@ text-decoration: none;
     font-size: 1.25em;
     font-weight: 25em;
     margin-top: 5%;
+  }
+  .lista1 {
+    width: 35%;
+    color: #5D5E5D;
+    font-size: 1.25em;
+    font-weight: 25em;
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+  .logo1 {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15%;
   }
   .boton {
     font-size: 1em;
@@ -92,17 +94,20 @@ text-decoration: none;
     color: #FFFFFF;
     background-color: transparent;
     background-image: linear-gradient(150deg, #008DBB 40%, #362B7B 100%);
-    border-radius: 3.125em 3.125em 3.125em 3.125em;
+    border-radius: 3.125em;
     padding: 4%;
     margin-left: 13%;
   }
+  .whatsapp {
+   position: fixed;
+   bottom: 2em;
+   right: 2em;
+  }
   .pieDePagina {
-    width: 100%;
     background: #0a141d;
-    height: 19%;
+    height: 10%;
   }
   .grupo1 {
-    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -110,45 +115,37 @@ text-decoration: none;
     padding: .94em .625em;
   }
   figure {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .box {
-    width: 100%;
-  }
   .box h2{
-    width: 100%;
     color: #fff;
     margin-bottom: 1.5625em;
     box-sizing: 1.25em;
   }
   .box p{
-    width: 100%;
     color: #efefef;
     margin-bottom: .3125em;
   }
   .redSocial {
     display: flex;
   }
-  .fa {
-    text-decoration: none;
-    color: #fff;
-    width: 3em;
-    font-size: 2.25em;
+  .redSociala {
+    font-size: 3.25em;
     margin-left: 0;
+    padding: .2em;
   }
   .grupo2 {
     background: #0d2033;
-    padding: .625em .625em;
+    padding: .625em;
     text-align: center;
     color: #fff;
   }
   .grupo2 small {
     font-size: .94em;
   }
-  @media screen and (max-width: 1070px) {
+  /*@media screen and (max-width: 1070px) {
     .nav-menu-hamburguesa{
       display: block;
       color: #fff;
@@ -195,29 +192,39 @@ text-decoration: none;
       height: 28%;
      }
   }
-
+*/
   @media screen and (max-width: 550px) {
-    body {
-      height: 250%;
-    }
     .logo {
       width: 5.25em;
       margin: 2.125em 1em .125em 1.875em;
     }
-    .nav-menu-hamburguesa{
+    .nav-menu-hamburguesa, .cerrar{
       display: block;
       color: #fff;
       background: #0d2033;
       border: none;
       font-size: 1.875em;
       padding: 0 5%;
-      margin-left: 5.375em;
+      margin-left: 8.375em;
     }
     .nav-menu {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: end;
+      gap: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      font-size: .8em;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
-    .main {
-      height: 110%;
+    .visible {
+      opacity: 1;
+      visibility: visible;
     }
     .imagen1 {
       height: 25%;
@@ -225,54 +232,52 @@ text-decoration: none;
     .imagenesProductos {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
     .productos{
-      width: 94%;
-      height: 60%;
-      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       border: none;
     }
     .imagen4, .imagen5, .imagen6, .imagen7, .imagen8, .imagen9, .imagen10{
-      width:47%;
+      width:60%;
       height:32%;
-      border-radius: .475em .475em .475em .475em;
+      border-radius: .475em;
     }
-   .lista{
+   .lista, .lista1{
     width: 90%;
-    height: 30%;
     margin-left: 10%;
     margin-top: 2%;
    }
+   .logo1 {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+   }
    .grupo1 {
-    width: 100%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2em;
-    padding: 2.2875em 0;
+    padding: 2.1875em 0;
    }
    .grupo2 {
-    margin-bottom: 0%;
+    margin-bottom: 0;
    }
    .box {
-    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
    }
    .redSocial {
     display: flex;
-    columns: #fff;
    }
    footer div .redSocial a {
-    color: #fff;
     padding: .3125em;
     font-size: .9375em;
    }
    .pieDePagina {
     font-size: .8em;
-    height: 35%;
    }
   }
 
